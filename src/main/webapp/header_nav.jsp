@@ -26,7 +26,7 @@
 			    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">아이템(관리)</a>
 			    <ul class="dropdown-menu">
 			      <li><a class="dropdown-item" href="<%=request.getContextPath()%>/item/ajax_managing.do">AJAX아이템리스트</a></li>
-			      <li><a class="dropdown-item" href="<%=request.getContextPath()%>/item/list.do">아이템리스트</a></li>
+			      <li><a class="dropdown-item" href="<%=request.getContextPath()%>/item/ajax_list.do">아이템리스트</a></li>
 			      <li><hr class="dropdown-divider"></li>
 			      <li><a class="dropdown-item" href="#">Separated link</a></li>
 			    </ul>
