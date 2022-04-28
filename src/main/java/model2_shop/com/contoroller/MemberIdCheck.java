@@ -15,11 +15,12 @@ import model2_shop.com.vo.MemberVo;
 public class MemberIdCheck extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException,ServletException {
+		System.out.println("테스트");
 		String id=req.getParameter("id");
 		MemberDao memDao=new MemberDao();
 		
 		resp.setContentType("json/application; charset=UTF-8");
-		//java에 JSON 라이브러리가 없어서 추가해서 사용해야한다. 
+		//java�뿉 JSON �씪�씠釉뚮윭由ш� �뾾�뼱�꽌 異붽��빐�꽌 �궗�슜�빐�빞�븳�떎. 
 		
 		MemberVo mem=null;
 		try {

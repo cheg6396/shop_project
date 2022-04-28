@@ -21,7 +21,7 @@ public class ItemAjax extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     //list or ?id= detail    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//해더 본문의 문자열에서 json으로 보낸 파라미터 불러오기 
+		//�빐�뜑 蹂몃Ц�쓽 臾몄옄�뿴�뿉�꽌 json�쑝濡� 蹂대궦 �뙆�씪誘명꽣 遺덈윭�삤湲� 
 		StringBuffer jb = new StringBuffer();
 		String line = null;
 		BufferedReader reader = request.getReader();
@@ -60,7 +60,7 @@ public class ItemAjax extends HttpServlet {
 		response.getWriter().append("{\"insert\":"+insert+"}");
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		///////id 파라미터가 오면 detail을 반환 
+		///////id �뙆�씪誘명꽣媛� �삤硫� detail�쓣 諛섑솚 
 		String item_num=request.getParameter("item_num");
 		
 		ItemDao itemDao=new ItemDao();
@@ -80,7 +80,7 @@ public class ItemAjax extends HttpServlet {
 
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StringBuffer json_str=new StringBuffer();
-		BufferedReader br=request.getReader();//본문 해더의 문자열을 읽는 객체 
+		BufferedReader br=request.getReader();//蹂몃Ц �빐�뜑�쓽 臾몄옄�뿴�쓣 �씫�뒗 媛앹껜 
 		String line="";
 		while((line=br.readLine())!=null) {
 			json_str.append(line);
