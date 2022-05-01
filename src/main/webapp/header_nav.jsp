@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SHOP</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<a>회원가입</a>
-	<a href="./login.jsp">로그인</a>
+
 </body>
 </html>
