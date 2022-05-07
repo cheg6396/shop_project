@@ -4,16 +4,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>SHOP: LOGIN</title>
 </head>
 <body>
-	<header>
+	<%	Object login_obj=session.getAttribute("login");
+		Object id=session.getAttribute("id");
+		if(login_obj!=null && !((boolean)login_obj)){
+			session.removeAttribute("login");// 세션 객체 삭제
+			//session.invalidate();//세션을 만료해서 모두 삭제 
+	%>
+	<script>
+		alert("아이디와 패스워드를 확인하세요!");
+	</script>
+	<%}	
 		
+	Object login_msg=session.getAttribute("login_msg");
+	if(login_msg!=null){
+		session.removeAttribute("login_msg");
+	%>
+	<script>alert("<%=login_msg%>")</script>
+	<%}%>
+	
+	<header>
+		<%@include file="/header_nav.jsp"%>		
 	</header>
 	<main>
 		<div class="login_container">
 			<div class="login_wrap">
-				<form action="#" method="POST">
+				<form action="<%=request.getContextPath()%>/login.do" method="POST">
 					<div class="input_row">
 						<input type="text" name="id" placeholder="아이디">
 					</div>
