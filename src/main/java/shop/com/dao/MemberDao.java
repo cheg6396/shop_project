@@ -55,7 +55,7 @@ public class MemberDao implements MemberDaoAble{
 		MemberVo mem = null;
 
 		Connection conn=ShopConnection.getConnection();
-		PreparedStatement ps=conn.prepareStatement("SELECT * FROM MEMBER WHERE id=?");
+		PreparedStatement ps=conn.prepareStatement("SELECT * FROM MEMBER WHERE id=? and pw=?");
 		ps.setString(1, id);
 		ps.setString(2, pw);
 		ResultSet rs=ps.executeQuery();

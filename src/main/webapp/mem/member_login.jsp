@@ -48,7 +48,7 @@
 			<div class="find_wrap">
 				<a href="#">아이디 찾기</a>
 				<a href="#">비밀번호 찾기</a>
-				<a href="#">회원가입</a>
+				<a href="./insert.do">회원가입</a>
 			</div>
 		</div>
 	</main>
